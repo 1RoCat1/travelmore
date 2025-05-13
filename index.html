@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Travelmore</title>
+	<link rel="icon" href="img/logo-image.svg">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/booking.js" defer></script>
+	<script src="js/search.js" defer></script>
+	<script src="js/getHotels.js" defer></script>
+	<script src="js/smoothScroll.js" defer></script>
+</head>
+<!-- class="show-hotels" -->
+
+<body id="body">
+	<header class="container header px-4 px-md-0">
+		<div class="row justify-content-between align-items-center">
+			<div class="col-lg-2 col-6">
+				<a href="index.html" class="logo-link">
+					<img width="128" src="img/logo.svg" alt="logo: Travelmore" class="logo-image">
+				</a>
+			</div>
+			<div class="col-lg-6 d-none d-lg-block">
+				<nav>
+					<ul class="navigation d-flex justify-content-around">
+						<li class="navigation-item">
+							<a href="#" class="navigation-link" data-field="category">Москва</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link" data-field="category">Санкт-Петербург</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link" data-field="category">Новосибирск</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link" data-field="category">Екатеринбург</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link" data-field="category">Казань</a>
+						</li>
+						<li class="navigation-item">
+							<a href="#" class="navigation-link">Все</a>
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+			<div class="col-lg-2 d-none d-lg-block">
+				<div class="form-control search-block">
+					<input type="text" class="form-control" placeholder="Поиск" aria-label="Recipient's username" aria-describedby="button-addon2">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="img/search.png" alt="search">
+					</button>
+				</div>
+			</div>
+			<div class="col-lg-2 col-6 d-flex justify-content-end">
+				<button class="button button-booking">
+					<img width="16" class="button-icon" src="img/booking.svg" alt="icon: booking">
+					<span class="button-text">Бронирования</span>
+					<span class="button-text booking-count"></span>
+				</button>
+			</div>
+		</div>
+		<!-- /.row -->
+	</header>
+	<section class="slider swiper-container">
+		<div class="swiper-wrapper">
+			<section class="slide slide-1 swiper-slide">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-10 offset-lg-1">
+							<span class="label">Популярное</span>
+							<h2 class="slide-title">Москва</h2>
+							<p class="slide-description">Столичные впечатления начинаются здесь! Забронируйте номер и насладитесь уникальной архитектурой и культурной жизнью Москвы.</p>
+							<button class="button add-to-booking">
+								<span class="button-price">от ₽3 тыс./сутки</span>
+								<span class="button-text">Забронировать</span>
+							</button>
+						</div>
+						<!-- /.col-4 offset-lg-1 -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<section class="slide slide-2 swiper-slide">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-10 offset-lg-1">
+							<span class="label">Популярное</span>
+							<h2 class="slide-title">Санкт-Петербург</h2>
+							<p class="slide-description">Северная столица очарует своим шармом и богатством истории. Узнайте больше, живя в уютных петербургских отелях.</p>
+							<button class="button add-to-booking">
+								<span class="button-price">от ₽4 тыс./сутки</span>
+								<span class="button-text">Забронировать</span>
+							</button>
+						</div>
+						<!-- /.col-4 offset-lg-1 -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<section class="slide slide-3 swiper-slide">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-10 offset-lg-1">
+							<span class="label">Популярное</span>
+							<h2 class="slide-title">Новосибирск</h2>
+							<p class="slide-description">Сибирская романтика и городская жизнь ждут вас в Новосибирске. Найдите идеальное жилье и наслаждайтесь яркими впечатлениями.</p>
+							<button class="button add-to-booking">
+								<span class="button-price">от ₽3 тыс./сутки</span>
+								<span class="button-text">Забронировать</span>
+							</button>
+						</div>
+						<!-- /.col-4 offset-lg-1 -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+		</div>
+		<!-- /.swiper-wrapper -->
+		<div class="slider-nav">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-1">
+						<button class="slider-button slider-button-prev">
+							<img src="img/arrow-prev.svg" alt="icon: arrow-prev">
+						</button>
+					</div>
+					<!-- /.col-1 -->
+					<div class="col-1">
+						<button class="slider-button slider-button-next">
+							<img src="img/arrow-next.svg" alt="icon: arrow-prev">
+						</button>
+					</div>
+					<!-- /.col-1 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.slider-nav -->
+	</section>
+	<!-- /.slider -->
+	<section class="special-offers container pt-5 pb-4">
+		<div class="row mb-4">
+			<div class="col-xl-6">
+				<div class="card card-1 mb-4">
+					<h3 class="card-title">Элегантность столицы ждёт тебя!</h3>
+					<p class="card-text">Изящные интерьеры, изысканное обслуживание и незабываемые впечатления ждут вас в Москве и Петербурге.</p>
+					<button class="button">
+						<span class="button-text">Посмотреть все</span>
+						<img src="img/arrow.svg" alt="icon: arrow" class="button-icon">
+					</button>
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.col-6 -->
+			<div class="col-xl-6">
+				<div class="card card-2 mb-4">
+					<h3 class="card-title text-light">Весеннее путешествие по России от ₽3 тыс./сутки</h3>
+					<p class="card-text text-light">Путешествуйте комфортно и экономично по лучшим регионам страны.</p>
+					<button class="button">
+						<span class="button-text">Посмотреть все</span>
+						<img src="img/arrow.svg" alt="icon: arrow" class="button-icon">
+					</button>
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.col-6 -->
+			<div class="col-xl-9 col-lg-6 mb-4">
+				<div class="card card-3">
+					<span class="label">Популярное</span>
+					<h3 class="card-title text-light large">Hit продаж месяца</h3>
+					<p class="card-text text-light large">Романтичный мини-отель в Казани с потрясающим видом на реку Казанку.
+						Роскошные просторные номера, собственный ресторан местной кухни, уникальный дизайн интерьера.</p>
+					<button class="button add-to-booking">
+						<span class="button-price">от ₽4 тыс./сутки</span>
+					</button>
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.col-9 -->
+			<div class="col-xl-3 col-lg-6">
+				<div class="card card-4">
+					<h3 class="card-title text-light mw-160">Новые популярные отели</h3>
+					<p class="card-text text-light">Оригинальный дизайнерский гостевой дом в Екатеринбурге.
+						Современный стиль, арт-обстановка, бесплатный Wi-Fi.
+					</p>
+					<button class="button add-to-booking button-four">
+						<span class="button-price">от ₽5 тыс./сутки</span>
+					</button>
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.col-3 -->
+		</div>
+		<!-- /.row -->
+		<div class="row align-items-center mb-4">
+			<div class="col-9">
+				<h2 class="section-title">Популярные отели</h2>
+			</div>
+			<!-- /.col-9 -->
+			<div class="col-3 d-flex justify-content-end">
+				<a href="#" class="more">Посмотреть все</a>
+			</div>
+			<!-- /.col-3 -->
+		</div>
+		<!-- /.row -->
+		<div class="short-hotels row">
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="hotels-card">
+					<span class="label null">Популярное</span>
+					<img src="db/img/moscow1.webp" alt="Бета Измайлово 3*" class="hotels-image">
+					<h3 class="hotels-title">Бета Измайлово 3*</h3>
+					<p class="hotels-description">3-звездочный отель в Москве</p>
+					<button class="button hotels-card-btn add-to-booking" data-id="001">
+						<span class="button-price">от ₽3 тыс./сутки</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-sm-6">
+					<div class="hotels-card">
+					<span class="label null">Популярное</span>
+					<img src="db/img/petersburg1.webp" alt="Best Western Zoom Hotel 3*" class="hotels-image">
+					<h3 class="hotels-title">Best Western Zoom Hotel 3*</h3>
+					<p class="hotels-description">3-звездочный отель в Санкт-Петербурге</p>
+					<button class="button hotels-card-btn add-to-booking" data-id="004">
+						<span class="button-price">от ₽3 тыс./сутки</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="hotels-card">
+					<span class="label null">Популярное</span>
+					<img src="db/img/novosibirsk2.webp" alt="Grand Autograph Hotel Novosibirsk 5*" class="hotels-image">
+					<h3 class="hotels-title">Grand Autograph Hotel Novosibirsk 5*</h3>
+					<p class="hotels-description">5-звездочный отель в Новосибирске</p>
+					<button class="button hotels-card-btn add-to-booking" data-id="008">
+						<span class="button-price">от ₽12 тыс./сутки</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="hotels-card">
+					<span class="label null">Популярное</span>
+					<img src="db/img/ekaterinburg1.webp" alt="МегаЛайт 3*" class="hotels-image">
+					<h3 class="hotels-title">МегаЛайт 3*</h3>
+					<p class="hotels-description">3-звездочный отель в Екатеринбурге</p>
+					<button class="button hotels-card-btn add-to-booking" data-id="010">
+						<span class="button-price">от ₽2 тыс./сутки</span>
+					</button>
+				</div>
+			</div>
+			<!-- /.col-3 -->
+		</div>
+		<!-- /.row -->
+	</section>
+
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-7 mb-4 mb-xl-0">
+					<nav>
+						<ul class="footer-menu d-sm-flex">
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link">Отели</a></li>
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link">О нас</a></li>
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQ</a></li>
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link">Блог</a></li>
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.col-7 -->
+				<div class="col-lg-3 d-flex align-items-center">
+					<span class="footer-text">Свяжитесь с нами</span>
+					<span class="footer-social d-inline-flex align-items-center">
+						<a href="#" class="social-link">
+							<img src="img/Facebook.svg" alt="Facebook">
+						</a>
+						<a href="#" class="social-link">
+							<img src="img/Twitter.svg" alt="Twitter">
+						</a>
+						<a href="#" class="social-link">
+							<img src="img/Instagram.svg" alt="Instagram">
+						</a>
+					</span>
+				</div>
+				<!-- /.col-3 -->
+				<div class="col-xl-2 col-lg-3 d-flex justify-content-lg-end mt-4 mt-lg-0">
+					<span class="footer-text">© 2025 Travelmore Hotels</span>
+				</div>
+				<!-- /.col-2 -->
+			</div>
+			<!-- /.row -->
+			<hr class="footer-line mt-4 mb-4">
+			<div class="row justify-content-between">
+				<div class="col-lg-4 col-sm-9">
+					<img class="payment-logo" src="img/visa.png" alt="visa logo">
+					<img class="payment-logo" src="img/master-card.png" alt="master card logo">
+					<img class="payment-logo" src="img/paypal.png" alt="paypal logo ">
+					<img class="payment-logo" src="img/bitcoin.png" alt="bitcoin logo">
+				</div>
+				<!-- /.col-4 -->
+				<div class="col-lg-2 col-sm-1 d-flex justify-content-end">
+					<a href="#body" class="scroll-link top-link d-flex align-items-center">
+						<span class="top-link-text">Вверх</span>
+						<img src="img/top.svg" alt="icon: arrow top">
+					</a>
+				</div>
+				<!-- /.col-2 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<div class="overlay" id="modal-booking">
+		<div class="modal">
+			<header class="modal-header">
+				<h2 class="modal-title">Бронирования</h2>
+				<button class="modal-close">x</button>
+			</header>
+			<table class="booking-table">
+				<colgroup>
+					<col class="col-hotels">
+					<col class="col-price">
+					<col class="col-minus">
+					<col class="col-qty">
+					<col class="col-plus">
+					<col class="col-total-price">
+					<col class="col-delete">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Отели</th>
+						<th>Цена</th>
+						<th colspan="3">Чел.</th>
+						<th colspan="2">Всего</th>
+					</tr>
+				</thead>
+				<tbody class="booking-table__hotels">
+					<tr>
+						<td>Название</td>
+						<td>Цена</td>
+						<td><button class="booking-btn-minus"">-</button></td>
+						<td>2</td>
+						<td><button class=" booking-btn-plus"">+</button></td>
+						<td>10$</td>
+						<td><button class="booking-btn-delete"">x</button></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan=" 5">Всего:</th>
+						<th class="card-table__total" colspan="2">10000$</th>
+					</tr>
+
+					</tfoot>
+			</table>
+			<form class="modal-form" action="">
+				<input class="modal-input" type="text" placeholder="Имя" name="nameCustomer">
+				<input class="modal-input" type="text" placeholder="Телефон" name="phoneCustomer">
+				<button class="button booking-buy" type="submit">
+					<span class="button-text">К оплате</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

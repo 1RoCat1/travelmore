@@ -1,0 +1,164 @@
+[
+  {
+    "id": "001",
+    "img": "img/moscow1.webp",
+    "name": "Бета Измайлово 3*",
+    "label": "Популярное",
+    "description": "3-звездочный отель в Москве",
+    "price": "3",
+    "category": "Москва"
+  },
+  {
+    "id": "002",
+    "img": "img/moscow2.webp",
+    "name": "Mandarin Moscow Hotel 4*",
+    "label": "Популярное",
+    "description": "4-звездочный отель в Москве",
+    "price": "4",
+    "category": "Москва"
+  },
+  {
+    "id": "003",
+    "img": "img/moscow3.webp",
+    "name": "Байкал City Hotel 3*",
+    "label": "",
+    "description": "3-звездочный отель в Москве",
+    "price": "3",
+    "category": "Москва"
+  },
+  {
+    "id": "004",
+    "img": "img/petersburg1.webp",
+    "name": "Best Western Zoom Hotel 3*",
+    "label": "Популярное",
+    "description": "3-звездочный отель в Санкт-Петербурге",
+    "price": "3",
+    "category": "Санкт-Петербург"
+  },
+  {
+    "id": "005",
+    "img": "img/petersburg2.webp",
+    "name": "Moskovsky Avenir 4*",
+    "label": "Популярное",
+    "description": "4-звездочный отель в Санкт-Петербурге",
+    "price": "4",
+    "category": "Санкт-Петербург"
+  },
+  {
+    "id": "006",
+    "img": "img/petersburg3.webp",
+    "name": "Acqualina 4*",
+    "label": "",
+    "description": "4-звездочный отель в Санкт-Петербурге",
+    "price": "7",
+    "category": "Санкт-Петербург"
+  },
+  {
+    "id": "007",
+    "img": "img/novosibirsk1.webp",
+    "name": "IQ Aparts 4*",
+    "label": "Популярное",
+    "description": "4-звездочный отель в Новосибирске",
+    "price": "3",
+    "category": "Новосибирск"
+  },
+  {
+    "id": "008",
+    "img": "img/novosibirsk2.webp",
+    "name": "Grand Autograph Hotel Novosibirsk 5*",
+    "label": "Популярное",
+    "description": "5-звездочный отель в Новосибирске",
+    "price": "12",
+    "category": "Новосибирск"
+  },
+  {
+    "id": "009",
+    "img": "img/novosibirsk3.webp",
+    "name": "Гостиниц Net 3*",
+    "label": "",
+    "description": "3-звездочный отель в Новосибирске",
+    "price": "3",
+    "category": "Новосибирск"
+  },
+  {
+    "id": "010",
+    "img": "img/ekaterinburg1.webp",
+    "name": "МегаЛайт 3*",
+    "label": "Популярное",
+    "description": "3-звездочный отель в Екатеринбурге",
+    "price": "2",
+    "category": "Екатеринбург"
+  },
+  {
+    "id": "011",
+    "img": "img/ekaterinburg2.webp",
+    "name": "Грин Парк Отель 3*",
+    "label": "Популярное",
+    "description": "3-звездочный отель в Екатеринбурге",
+    "price": "6",
+    "category": "Екатеринбург"
+  },
+  {
+    "id": "012",
+    "img": "img/ekaterinburg3.webp",
+    "name": "Elements Ekaterinburg 4*",
+    "label": "",
+    "description": "4-звездочный отель в Екатеринбурге",
+    "price": "7",
+    "category": "Екатеринбург"
+  },
+  {
+    "id": "013",
+    "img": "img/kazan1.webp",
+    "name": "Yamle 4*",
+    "label": "Популярное",
+    "description": "4-звездочный отель в Казани",
+    "price": "8",
+    "category": "Казань"
+  },
+  {
+    "id": "014",
+    "img": "img/kazan2.webp",
+    "name": "Karl House 3*",
+    "label": "",
+    "description": "3-звездочный отель в Казани",
+    "price": "5",
+    "category": "Казань"
+  },
+  {
+    "id": "015",
+    "img": "img/kazan3.webp",
+    "name": "Казан Султан 3*",
+    "label": "",
+    "description": "3-звездочный отель в Казани",
+    "price": "4",
+    "category": "Казань"
+  },
+  {
+    "id": "016",
+    "img": "img/sochi1.webp",
+    "name": "Радуга-Престиж 3*",
+    "label": "",
+    "description": "3-звездочный отель в Сочи",
+    "price": "2",
+    "category": "Сочи"
+  },
+  {
+    "id": "017",
+    "img": "img/kaliningrad1.webp",
+    "name": "Мартон Пелас 4*",
+    "label": "",
+    "description": "4-звездочный отель в Калининграде",
+    "price": "8",
+    "category": "Калининград"
+  },
+  {
+    "id": "018",
+    "img": "img/vladivostok1.webp",
+    "name": "Vvo Apartments 4*",
+    "label": "",
+    "description": "4-звездочный отель во Владивостоке",
+    "price": "10",
+    "category": "Владивосток"
+  }
+]
