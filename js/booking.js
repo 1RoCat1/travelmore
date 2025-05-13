@@ -6,6 +6,7 @@ const booking = function () {
   const modalForm = booking.querySelector(".modal-form");
   const cardTableTotal = booking.querySelector(".card-table__total");
   const hotelsContainer = document.querySelector(".long-hotels-list");
+  const hotelsContainerShort = document.querySelector(".short-hotels");
 
   const deletebookingItem = (id) => {
     const booking = JSON.parse(localStorage.getItem("booking"));
@@ -156,6 +157,17 @@ const booking = function () {
 
   if (hotelsContainer) {
     hotelsContainer.addEventListener("click", (event) => {
+      if (event.target.closest(".add-to-booking")) {
+        const buttonTobooking = event.target.closest(".add-to-booking");
+        const hotelId = buttonTobooking.dataset.id;
+
+        addTobooking(hotelId);
+      }
+    });
+  }
+
+  if (hotelsContainerShort) {
+    hotelsContainerShort.addEventListener("click", (event) => {
       if (event.target.closest(".add-to-booking")) {
         const buttonTobooking = event.target.closest(".add-to-booking");
         const hotelId = buttonTobooking.dataset.id;

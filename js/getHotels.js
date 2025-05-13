@@ -1,6 +1,7 @@
 const gethotels = () => {
   const links = document.querySelectorAll('.navigation-link');
   const more = document.querySelector('.more');
+  const linkToHotels = document.querySelectorAll('.link-to-hotels');
 
   const renderhotels = (hotels) => {
     const hotelsContainer = document.querySelector('.long-hotels-list');
@@ -64,6 +65,15 @@ const gethotels = () => {
     more.addEventListener('click', event => {
       event.preventDefault();
       getData();
+    });
+  }
+
+  if (linkToHotels) {
+    linkToHotels.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        getData();
+      })
     });
   }
 
